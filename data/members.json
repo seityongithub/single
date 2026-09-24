@@ -46,7 +46,7 @@
     {
       "name": "DEN",
       "username": "@DEN",
-      "role": "Single",
+      "role": "SINGLE",
       "profilePath": "DEN",
       "discordId": "1351488243325210634",
       "youtubeUrl": "https://youtu.be/y2sY43GhOfA",
@@ -76,7 +76,7 @@
     {
       "name": "VINCE",
       "username": "@VINCE",
-      "role": "Batugan",
+      "role": "BATUGAN",
       "profilePath": "VINCE",
       "discordId": "1250786330007310421",
       "youtubeUrl": "https://youtu.be/pkZ3IOn0LAE?si=FllYq7X1-9wBm3hK",
@@ -107,7 +107,7 @@
     {
       "name": "ANDREI",
       "username": "@ANDREI",
-      "role": "Single",
+      "role": "SINGLE",
       "profilePath": "ANDREI",
       "discordId": "1368813356835799172",
       "youtubeUrl": "https://youtu.be/OxpCXUZN0hY",
@@ -138,7 +138,7 @@
     {
       "name": "JA",
       "username": "@JA",
-      "role": "Single",
+      "role": "SINGLE",
       "profilePath": "JA",
       "discordId": "984072048341053451",
       "youtubeUrl": "https://www.youtube.com/watch?v=JDb3ZZD4bA0",
@@ -167,7 +167,7 @@
     {
       "name": "TRAM",
       "username": "@TRAM",
-      "role": "Single",
+      "role": "SINGLE",
       "profilePath": "tram",
       "discordId": "748526466152792154",
       "youtubeUrl": "https://www.youtube.com/watch?v=uyupd2PXbSQ&list=RDuyupd2PXbSQ&start_radio=1",
@@ -189,6 +189,33 @@
         "mouse": "MCHOSE L7 ULTRA+",
         "keyboard": "ATTACK SHARK X68 HE",
         "headset": "HYPERX CLOUD III"
+      },
+      "gallery": []
+    },
+    {
+      "name": "Iyennie",
+      "username": "@IYENNIE",
+      "role": "SINGLE",
+      "profilePath": "iyennie",
+      "discordId": "714714156728582174",
+      "youtubeUrl": "https://youtu.be/y2sY43GhOfA",
+      "gifUrl": "/music-visual.gif",
+      "background": "/background/iyennie.gif",
+      "bio": "",
+      "socials": {
+        "facebookUrl": "https://www.facebook.com/shaneadrienne.rosales",
+        "spotify": "3174qvje5zg5clxegxxzxdseatdu?si=d5726c677c0a45ad",
+        "tiktok": "@yennie_only",
+        "instagram": "only_iyennie"
+      },
+      "pcSpecs": {
+        "cpu": "RYZEN 7 5700X",
+        "gpu": "NVIDIA GeForce RTX 4060 16GB"
+      },
+      "peripherals": {
+        "mouse": "ATTK SHARK X11",
+        "keyboard": "FURYCUBE & REDDRAGON",
+        "headset": "SteelSeries Arctis Nova Pro Wireless"
       },
       "gallery": []
     }

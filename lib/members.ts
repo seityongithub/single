@@ -37,7 +37,7 @@ export const ROLES: RoleMeta[] = [
   { id: 'EXCLUE_GIRLS', label: 'Xclue Girls', blurb: 'The XCLUE girls' },
   { id: 'DIRECTOR', label: 'Director', blurb: 'Leading the crew' },
   { id: 'MEMBERS', label: 'Members', blurb: 'The core crew' },
-  { id: 'SINGLE', label: 'Single', blurb: 'The core crew' },
+  { id: 'SINGLE', label: 'Single', blurb: 'Hinagpis' },
   { id: 'BATUGAN', label: 'Batugan', blurb: 'The core crew' },
 ]
 
