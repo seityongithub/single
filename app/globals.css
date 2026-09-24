@@ -1,0 +1,414 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, monospace;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+
+  --color-status-online: var(--status-online);
+  --color-status-idle: var(--status-idle);
+  --color-status-dnd: var(--status-dnd);
+  --color-status-offline: var(--status-offline);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+}
+
+:root {
+  color-scheme: dark;
+  --background: oklch(0.10 0 0);
+  --foreground: oklch(0.95 0 0);
+
+  --card: oklch(0.14 0 0);
+  --card-foreground: oklch(0.95 0 0);
+
+  --popover: oklch(0.12 0 0);
+  --popover-foreground: oklch(0.95 0 0);
+
+  --primary: oklch(0.90 0 0);
+  --primary-foreground: oklch(0.08 0 0);
+
+  --secondary: oklch(0.19 0 0);
+  --secondary-foreground: oklch(0.95 0 0);
+
+  --muted: oklch(0.20 0 0);
+  --muted-foreground: oklch(0.66 0 0);
+
+  --accent: oklch(0.24 0 0);
+  --accent-foreground: oklch(0.95 0 0);
+
+  --destructive: oklch(0.58 0 0);
+
+  --border: oklch(0.35 0 0 / 25%);
+  --input: oklch(0.35 0 0 / 20%);
+  --ring: oklch(0.85 0 0 / 60%);
+
+  --gold: oklch(0.88 0 0);
+  --gold-soft: oklch(0.72 0 0);
+
+  --status-online: oklch(0.82 0 0);
+  --status-idle: oklch(0.72 0 0);
+  --status-dnd: oklch(0.62 0 0);
+  --status-offline: oklch(0.45 0 0);
+
+  --radius: 0.9rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Neutral black-and-white dashboard backdrop */
+.xclue-backdrop {
+  background:
+    radial-gradient(60% 55% at 50% 0%, rgba(255,255,255,.045), transparent 70%),
+    radial-gradient(50% 40% at 85% 100%, rgba(255,255,255,.03), transparent 70%),
+    radial-gradient(45% 40% at 10% 90%, rgba(255,255,255,.025), transparent 70%),
+    linear-gradient(180deg, oklch(0.07 0 0), oklch(0.12 0 0));
+}
+
+@keyframes xclue-pulse {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
+}
+.animate-pulse-slow {
+  animation: xclue-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes xclue-scan {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Slow neutral sheen sweeping across profile backdrops */
+.xclue-sheen {
+  background: linear-gradient(
+    100deg,
+    transparent,
+    rgba(255,255,255,.045),
+    transparent
+  );
+  animation: xclue-sheen-move 9s linear infinite;
+}
+@keyframes xclue-sheen-move {
+  0% { transform: translateX(-120%) skewX(-12deg); }
+  100% { transform: translateX(340%) skewX(-12deg); }
+}
+
+
+/* Subtle guns.lol-inspired interaction: movement, not glow. */
+.xclue-hover-card {
+  transform: translate3d(0, 0, 0);
+  transition: transform 220ms cubic-bezier(.2,.8,.2,1), border-color 220ms ease, background-color 220ms ease;
+  will-change: transform;
+}
+.xclue-hover-card:hover {
+  transform: translate3d(0, -5px, 0) scale(1.008);
+}
+.xclue-hover-row {
+  transform: translate3d(0, 0, 0);
+  transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease;
+}
+.xclue-hover-row:hover {
+  transform: translate3d(4px, 0, 0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .xclue-hover-card, .xclue-hover-row { transition: none; }
+  .xclue-hover-card:hover, .xclue-hover-row:hover { transform: none; }
+}
+@media (max-width: 1023px) {
+  .xclue-hover-card:hover { transform: translate3d(0, -3px, 0); }
+}
+
+/* Compact volume control inspired by the reference player. */
+.xclue-volume-control {
+  transition: background-color 180ms ease, border-color 180ms ease;
+}
+.xclue-volume-control:hover {
+  background-color: rgb(30 41 59 / 0.98);
+  border-color: rgb(255 255 255 / 0.10);
+}
+.xclue-volume-slider {
+  height: 8px;
+  min-width: 80px;
+  touch-action: none;
+  cursor: ew-resize !important;
+}
+.xclue-volume-slider:disabled { cursor: not-allowed !important; }
+.xclue-volume-slider::-webkit-slider-runnable-track { height: 5px; border-radius: 999px; }
+.xclue-volume-slider::-moz-range-track { height: 5px; border-radius: 999px; }
+.xclue-volume-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: white;
+  border: 0;
+}
+.xclue-volume-slider::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: white;
+  border: 0;
+}
+
+
+/* Keep the music controls anchored even when track names are very long. */
+.xclue-music-content {
+  min-width: 0;
+  overflow: hidden;
+}
+@media (max-width: 420px) {
+  .xclue-music-content p { max-width: 100%; }
+}
+
+/* Activity panels stay within their grid column even with very long Discord/Spotify titles. */
+.xclue-activity-safe { min-width: 0; width: 100%; overflow: hidden; }
+.xclue-activity-safe * { min-width: 0; }
+
+
+/* Additional visual effects (kept intentionally to a maximum of three). */
+.xclue-scanline-effect {
+  opacity: 0.11;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 3px,
+    rgba(255, 255, 255, 0.035) 4px,
+    transparent 5px
+  );
+  animation: xclue-scanline-drift 10s linear infinite;
+}
+@keyframes xclue-scanline-drift {
+  from { transform: translateY(-12px); }
+  to { transform: translateY(12px); }
+}
+
+.xclue-particle-field {
+  opacity: 0.48;
+}
+.xclue-particle {
+  position: absolute;
+  display: block;
+  border-radius: 999px;
+  background: currentColor;
+  color: rgba(255,255,255,.75);
+  box-shadow: 0 0 10px currentColor;
+  animation-name: xclue-particle-float;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes xclue-particle-float {
+  0%, 100% { opacity: 0.12; transform: translate3d(0, 8px, 0) scale(0.8); }
+  50% { opacity: 0.75; transform: translate3d(8px, -22px, 0) scale(1.15); }
+}
+
+.xclue-cursor-glow {
+  width: 160px;
+  height: 160px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(255,255,255,.05), transparent 68%);
+  filter: blur(5px);
+  transition: transform 70ms linear;
+  will-change: transform;
+}
+
+/* The supplied Goth cross is the site-wide cursor on every profile. */
+html,
+body,
+a,
+button,
+[role='button'],
+select,
+summary {
+  cursor: url('/cursor/goth-cross-20.png') 10 10, auto !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .xclue-scanline-effect,
+  .xclue-particle,
+  .xclue-cursor-glow { animation: none; transition: none; }
+  .xclue-cursor-glow { display: none; }
+}
+
+
+/* Responsive profile layout: one clean column until the desktop canvas is wide enough for three panels. */
+@media (max-width: 1279px) {
+  .xclue-backdrop { min-height: 100dvh; }
+}
+@media (max-width: 640px) {
+  .xclue-hover-card { border-radius: 1.15rem; }
+  .xclue-hover-card:hover { transform: translate3d(0, -2px, 0); }
+  .xclue-volume-slider { min-width: 0; width: 100%; }
+}
+
+/* Featured uploads stay compact so the left rail remains balanced with the right rail. */
+.xclue-featured-upload-thumb { aspect-ratio: 16 / 9; }
+@media (max-width: 640px) {
+  .xclue-featured-upload-thumb { width: 76px; }
+}
+
+
+/* Dashboard layout inspired by the supplied XCLUE reference: fixed member rail,
+   open center profile, and compact activity widgets. */
+.xclue-dashboard {
+  --dash-border: rgba(255,255,255,.09);
+  --dash-panel: rgba(5,5,5,.52);
+  font-family: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+}
+.xclue-dashboard::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background: linear-gradient(90deg, rgba(0,0,0,.28), transparent 28%, transparent 72%, rgba(0,0,0,.3));
+}
+.xclue-sidebar {
+  box-shadow: 0 20px 70px rgba(0,0,0,.35);
+}
+.xclue-sidebar-link {
+  position: relative;
+}
+.xclue-sidebar-link::after {
+  content: '';
+  position: absolute;
+  right: 10px;
+  width: 3px;
+  height: 3px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.0);
+  transition: background .2s ease, transform .2s ease;
+}
+.xclue-sidebar-link:hover::after,
+.xclue-sidebar-link.bg-white\/\[0\.09\]::after {
+  background: rgba(255,255,255,.8);
+  transform: scale(1.25);
+}
+.xclue-hero-panel {
+  min-height: min(620px, calc(100dvh - 120px));
+  box-shadow: inset 0 0 80px rgba(0,0,0,.18);
+}
+.xclue-hero-panel::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(55% 50% at 50% 55%, transparent 0%, rgba(0,0,0,.08) 58%, rgba(0,0,0,.42) 100%);
+}
+.xclue-dashboard-card,
+.xclue-setup-item {
+  transition: transform .2s ease, border-color .2s ease, background-color .2s ease;
+}
+.xclue-dashboard-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255,255,255,.14);
+}
+.xclue-setup-item:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255,255,255,.14);
+  background: rgba(255,255,255,.045);
+}
+/* GamesPanel already supplies its own card shell; when it lives inside the
+   dashboard's Currently Playing card, make that inner shell transparent. */
+.xclue-dashboard-card > .xclue-hover-card {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  backdrop-filter: none;
+}
+.xclue-dashboard .xclue-hover-row:hover {
+  transform: translateX(3px);
+}
+@media (max-width: 1279px) {
+  .xclue-hero-panel { min-height: 520px; }
+}
+@media (max-width: 767px) {
+  .xclue-dashboard .xclue-hero-panel {
+    min-height: auto;
+    padding-top: 8rem;
+  }
+  .xclue-dashboard .xclue-hero-panel > div:last-child > div {
+    min-height: auto;
+  }
+}
+
+
+/* Centered dashboard canvas: sidebar, main profile and right widgets stay together. */
+.xclue-dashboard {
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+.xclue-dashboard > .relative.z-10 {
+  width: 100%;
+}
+.xclue-sidebar {
+  position: sticky;
+  top: 16px;
+  height: calc(100dvh - 32px);
+  max-height: 860px;
+}
+.xclue-sidebar nav {
+  min-height: 0;
+}
+@media (max-width: 1279px) {
+  .xclue-sidebar {
+    position: relative;
+    top: auto;
+    height: auto;
+    max-height: none;
+    order: -1;
+  }
+  .xclue-sidebar nav {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 4px;
+  }
+  .xclue-sidebar nav button {
+    justify-content: center;
+    padding: 10px 8px;
+  }
+  .xclue-sidebar > .border-t { display: none; }
+}
+@media (max-width: 700px) {
+  .xclue-dashboard .grid.xl\:grid-cols-\[210px_minmax\(0\,1fr\)_320px\] {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .xclue-sidebar nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .xclue-sidebar { border-radius: 1rem; }
+  .xclue-hero-panel { min-height: 430px; }
+}

@@ -1,0 +1,197 @@
+{
+  "template": {
+    "name": "den",
+    "username": "@den",
+    "role": "FOUNDER",
+    "profilePath": "den",
+    "discordId": "1351488243325210634",
+    "youtubeUrl": "https://www.youtube.com/watch?v=fJsJU7E7X-M",
+    "gifUrl": "/music-visual.gif",
+    "background": "/backgrounds/default.gif",
+    "bio": "xclue member",
+    "socials": {
+      "youtube": "@xclue",
+      "tiktok": "xclue",
+      "spotify": "xclue",
+      "kick": "denxlr",
+      "twitch": "denxlr"
+    },
+    "pcSpecs": {
+      "cpu": "AMD Ryzen 7 5800X",
+      "gpu": "RX 6600XT",
+      "motherboard": "MSI X570",
+      "ram": "32GB DDR4 3600MHz"
+    },
+    "peripherals": {
+      "mouse": "Pulsar X2 V3 T1 Edition",
+      "keyboard": "Anne Pro 2",
+      "microphone": "HyperX Solocast 2",
+      "headset": "Razer Blackshark V2 X"
+    },
+    "avatar": "/profile/den.png",
+    "gallery": [
+      "/gallery/template-1.svg",
+      "/gallery/template-2.svg",
+      "/gallery/template-3.svg",
+      "/gallery/template-4.svg",
+      "/gallery/template-5.svg",
+      "/gallery/template-6.svg",
+      "/gallery/template-7.svg",
+      "/gallery/template-8.svg",
+      "/gallery/template-9.svg",
+      "/gallery/template-10.svg"
+    ]
+  },
+  "members": [
+    {
+      "name": "DEN",
+      "username": "@DEN",
+      "role": "Single",
+      "profilePath": "DEN",
+      "discordId": "1351488243325210634",
+      "youtubeUrl": "https://youtu.be/y2sY43GhOfA",
+      "gifUrl": "/music-visual.gif",
+      "background": "/backgrounds/default.gif",
+      "bio": "",
+      "socials": {
+        "youtube": "@denxclue",
+        "tiktok": "@denxclue",
+        "spotify": "l13wlym2w4vkzxkjajhispzt0?si=43a29220f8044d47",
+        "kick": "@denxlr"
+      },
+      "pcSpecs": {
+        "cpu": "AMD Ryzen 5 5600X",
+        "gpu": "MSI 5060 TI 16GB",
+        "motherboard": "GIGABYTE DS3H B550M",
+        "ram": "32GB DDR4 3600MHz"
+      },
+      "peripherals": {
+        "mouse": "PRO X2 SUPERSTRIKE",
+        "keyboard": "ATTACK SHARK R82 HE",
+        "microphone": "MAONO PD100X",
+        "headset": "N/A"
+      },
+      "gallery": ["gallery/denver/denver.jpg", "gallery/denver/denver-2.png"]
+    },
+    {
+      "name": "VINCE",
+      "username": "@VINCE",
+      "role": "Batugan",
+      "profilePath": "VINCE",
+      "discordId": "1250786330007310421",
+      "youtubeUrl": "https://youtu.be/pkZ3IOn0LAE?si=FllYq7X1-9wBm3hK",
+      "gifUrl": "/music-visual.gif",
+      "banner": "/banner/vince.png",
+      "background": "/background/vince.gif",
+      "bio": "",
+      "socials": {
+        "youtube": "@1.vinceee",
+        "tiktok": "@1.vinceee",
+        "spotify": "31aba4fqckciydim7d3kzifmnzia?si=4e506b4fb6a04b3c",
+        "instagram": "dfntlyvinxii_"
+      },
+      "pcSpecs": {
+        "cpu": "RYZEN 5 5600GT",
+        "gpu": "RTX 3060TI",
+        "motherboard": "GIGABYTE DS3H B550M",
+        "ram": "16GB DDR4"
+      },
+      "peripherals": {
+        "mouse": "ATK AIR A9 PLUS",
+        "keyboard": "MADLION 68 V2",
+        "microphone": "FIFINE AM8",
+        "headset": "LOGITECH G321"
+      },
+      "gallery": []
+    },
+    {
+      "name": "ANDREI",
+      "username": "@ANDREI",
+      "role": "Single",
+      "profilePath": "ANDREI",
+      "discordId": "1368813356835799172",
+      "youtubeUrl": "https://youtu.be/OxpCXUZN0hY",
+      "gifUrl": "/music-visual.gif",
+      "banner": "/banner/andrei.png",
+      "background": "/background/andrei.png",
+      "bio": "Mommy strat lagi",
+      "socials": {
+        "youtube": "@andreidragon67",
+        "tiktok": "@rorn.tp",
+        "spotify": "31l2g6kgwaegrf22tbjow2d5lguy",
+        "kick": "@andreidragon"
+      },
+      "pcSpecs": {
+        "cpu": "AMD Ryzen 7 5700X",
+        "gpu": "RTX  3050",
+        "motherboard": "AMD",
+        "ram": "16GB DDR4"
+      },
+      "peripherals": {
+        "mouse": "ATTACK SHARK X11",
+        "keyboard": "MADLIONS 60 HE",
+        "microphone": "MAONO DGM20s",
+        "headset": "ATTACK SHARK L30 PRO"
+      },
+      "gallery": []
+    },
+    {
+      "name": "JA",
+      "username": "@JA",
+      "role": "Single",
+      "profilePath": "JA",
+      "discordId": "984072048341053451",
+      "youtubeUrl": "https://www.youtube.com/watch?v=JDb3ZZD4bA0",
+      "gifUrl": "/background/ja.gif",
+      "background": "/background/ja.gif",
+      "bio": "",
+      "socials": {
+        "tiktok": "@thisuser_calledja",
+        "spotify": "31kncoif4cddvkmjwhem7dkgzeei",
+        "kick": "@jaa2stylish"
+      },
+      "pcSpecs": {
+        "cpu": "AMD Ryzen 7 5800X",
+        "gpu": "RX 6600XT",
+        "motherboard": "MSI X570",
+        "ram": "32GB DDR4 3600MHz"
+      },
+      "peripherals": {
+        "mouse": "ATTACK SHARK X11 SE",
+        "keyboard": "MADLIONS 60 HE",
+        "microphone": "RAZER SEIREN V3",
+        "headset": "KZ EDZ DYNAMIC DRIVER"
+      },
+      "gallery": []
+    },
+    {
+      "name": "TRAM",
+      "username": "@TRAM",
+      "role": "Single",
+      "profilePath": "tram",
+      "discordId": "748526466152792154",
+      "youtubeUrl": "https://www.youtube.com/watch?v=uyupd2PXbSQ&list=RDuyupd2PXbSQ&start_radio=1",
+      "gifUrl": "/music-visual.gif",
+      "background": "/background/tram.gif",
+      "bio": "",
+      "socials": {
+        "youtube": "@Tramsmoke",
+        "tiktok": "@tramsmoke",
+        "kick": "@tramsidequest"
+      },
+      "pcSpecs": {
+        "cpu": "AMD Ryzen 5 5600X",
+        "gpu": "1660 SUPER",
+        "motherboard": "AORUS ELITE B550M",
+        "ram": "T-FORCE 16GB 3200 MHZ"
+      },
+      "peripherals": {
+        "mouse": "MCHOSE L7 ULTRA+",
+        "keyboard": "ATTACK SHARK X68 HE",
+        "headset": "HYPERX CLOUD III"
+      },
+      "gallery": []
+    }
+  ],
+  "_note": "Each profile is independent and is available at /den, /member2, /member3, /member4, /member5 and /member6. Replace the placeholder member entries with real Discord IDs and profile data."
+}
